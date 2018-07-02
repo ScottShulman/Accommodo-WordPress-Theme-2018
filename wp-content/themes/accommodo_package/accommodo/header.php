@@ -46,23 +46,35 @@ $accommodo_redux_demo = get_option('redux_demo');?>
                                     </select>
                                 </div>
                                 <!--end element-->
-                                <div class="element">
-                                    <a href="#tab-sign-in" data-toggle="modal" data-tab="true" data-target="#sign-in-register-modal"><?php if(isset($accommodo_redux_demo['header_sign'])){?>
-                                    <?php echo esc_attr(htmlspecialchars_decode($accommodo_redux_demo['header_sign']));?>
-                                    <?php }else{?>
-                                    <?php echo esc_html__( 'Sign In', 'accommodo' );
-                                    }
+                                <?php global $current_user; wp_get_current_user(); ?>
+								<?php if ( is_user_logged_in() ) { ?>
+								<div class="element">
+								<a href="<?php echo home_url('/login'); ?>" > <?php echo $current_user->user_login ?> </a>
+								</div>
+								<?php }	else {  ?>
+								<div class="element">
+								<a href="<?php echo home_url('/login'); ?>" > Sign In </a>
+								</div>
+								<?php } ?>
+								<div class="element">
+								<a href="<?php echo home_url('/register'); ?>" > Register </a>
+								</div>
+                            <!--<div class="element">
+                                    <a href="#tab-sign-in" data-toggle="modal" data-tab="true" data-target="#sign-in-register-modal"><?php //if(isset($accommodo_redux_demo['header_sign'])){?>
+                                    <?php //echo esc_attr(htmlspecialchars_decode($accommodo_redux_demo['header_sign']));?>
+                                    <?php //}else{?>
+                                    <?php //echo esc_html__( 'Sign In', 'accommodo' );
+                                    // }
                                     ?></a>
                                 </div>
-                                <!--end element-->
                                 <div class="element">
-                                    <a href="#tab-register" data-toggle="modal" data-tab="true" data-target="#sign-in-register-modal"><?php if(isset($accommodo_redux_demo['header_register'])){?>
-                                    <?php echo esc_attr(htmlspecialchars_decode($accommodo_redux_demo['header_register']));?>
-                                    <?php }else{?>
-                                    <?php echo esc_html__( 'Register', 'accommodo' );
-                                    }
+                                    <a href="#tab-register" data-toggle="modal" data-tab="true" data-target="#sign-in-register-modal"><?php //if(isset($accommodo_redux_demo['header_register'])){?>
+                                    <?php //echo esc_attr(htmlspecialchars_decode($accommodo_redux_demo['header_register']));?>
+                                    <?php // }else{?>
+                                    <?php //echo esc_html__( 'Register', 'accommodo' );
+                                    // }
                                     ?></a>
-                                </div>
+                                </div>-->
                                 
                             </div>
                             <!--end right-->

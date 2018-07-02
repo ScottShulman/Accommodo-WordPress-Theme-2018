@@ -8,3 +8,15 @@ Template: accommodo
 Version: 1.0
 Text Domain:  accommodo-child
 */
+
+.bg-transfer img { display: block;}
+.um-field.um-field-c { display: none;}
+select#role { display: block !important; border: 2px solid #ccc; padding: 6px; color: #000;}
+
+.um-form input#um-submit-btn { background: #488f3e;}
+.vc_tta-tabs-list li.vc_tta-tab.vc_active a {
+    background: #488f3e !important;
+    color: #fff !important;
+    font-size: 15px;
+    font-weight: 600;
+}
