@@ -83,7 +83,8 @@ button.datepick-cmd {
 	padding-right: 2%;
 	text-align: right;
 }
-.datepick-rtl .datepick-cmd-prev, .datepick-rtl .datepick-cmd-prevJump, .datepick-rtl .datepick-cmd-clear {
+.datepick-rtl .datepick-cmd-prev, .datepick-rtl .datepick-cmd-prevJump,
+.datepick-rtl .datepick-cmd-clear {
 	float: right;
 	padding-left: 0%;
 	padding-right: 2%;
@@ -92,7 +93,8 @@ button.datepick-cmd {
 .datepick-rtl .datepick-cmd-current, .datepick-rtl .datepick-cmd-today {
 	float: right;
 }
-.datepick-rtl .datepick-cmd-next, .datepick-rtl .datepick-cmd-nextJump, .datepick-rtl .datepick-cmd-close {
+.datepick-rtl .datepick-cmd-next, .datepick-rtl .datepick-cmd-nextJump,
+.datepick-rtl .datepick-cmd-close {
 	float: left;
 	padding-left: 2%;
 	padding-right: 0%;

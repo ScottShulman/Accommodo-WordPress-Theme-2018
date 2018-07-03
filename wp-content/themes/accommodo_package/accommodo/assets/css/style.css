@@ -1138,6 +1138,7 @@ ul.half li {
   top: 0;
 }
 .comments .comment figure .image {
+  background-color: #1f1f1f;
   height: 70px;
   position: relative;
   overflow: hidden;
