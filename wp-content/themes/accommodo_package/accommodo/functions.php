@@ -503,4 +503,18 @@ function accommodo_theme_register_required_plugins() {
     );
     tgmpa( $plugins, $config );
 }
+function wpbsearchform( $form ) {
+ 
+    $form = '<form class="labels-uppercase" role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
+<div class="form-group"><label for="form-search">' . __('KEYWORD OR TOPIC') . '</label>
+<input type="text" class="form-control" value="' . get_search_query() . '" name="s" id="s" placeholder="e.g. Reservation"/>	
+</div>
+<div class="form-group">
+<input type="submit" id="searchsubmit" class="btn btn-default pull-right btn-rounded btn-framed btn-white" value="'. esc_attr__('Search') .'" />
+</div>
+</form>';
+ 
+    return $form;
+}
+add_shortcode('faqSearchform', 'wpbsearchform');
 ?>

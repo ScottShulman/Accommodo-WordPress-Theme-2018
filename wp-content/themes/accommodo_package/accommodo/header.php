@@ -37,7 +37,7 @@ $accommodo_redux_demo = get_option('redux_demo');?>
                             </div>
                             <!--end left-->
                             <div class="right">
-                                <div class="element">
+                             <?php   /* <div class="element">
                                     <select>
                                         <option><?php echo esc_html__( '&#36;', 'accommodo' );
                                     ?></option>
@@ -58,23 +58,23 @@ $accommodo_redux_demo = get_option('redux_demo');?>
 								<?php } ?>
 								<div class="element">
 								<a href="<?php echo home_url('/register'); ?>" > Register </a>
-								</div>
-                            <!--<div class="element">
-                                    <a href="#tab-sign-in" data-toggle="modal" data-tab="true" data-target="#sign-in-register-modal"><?php //if(isset($accommodo_redux_demo['header_sign'])){?>
-                                    <?php //echo esc_attr(htmlspecialchars_decode($accommodo_redux_demo['header_sign']));?>
-                                    <?php //}else{?>
-                                    <?php //echo esc_html__( 'Sign In', 'accommodo' );
-                                    // }
+								</div> */ ?>
+                            <div class="element">
+                                    <a href="#tab-sign-in" data-toggle="modal" data-tab="true" data-target="#sign-in-register-modal"><?php if(isset($accommodo_redux_demo['header_sign'])){?>
+                                    <?php echo esc_attr(htmlspecialchars_decode($accommodo_redux_demo['header_sign']));?>
+                                    <?php }else{?>
+                                    <?php echo esc_html__( 'Sign In', 'accommodo' );
+                                     }
                                     ?></a>
                                 </div>
                                 <div class="element">
-                                    <a href="#tab-register" data-toggle="modal" data-tab="true" data-target="#sign-in-register-modal"><?php //if(isset($accommodo_redux_demo['header_register'])){?>
-                                    <?php //echo esc_attr(htmlspecialchars_decode($accommodo_redux_demo['header_register']));?>
-                                    <?php // }else{?>
-                                    <?php //echo esc_html__( 'Register', 'accommodo' );
-                                    // }
+                                    <a href="#tab-register" data-toggle="modal" data-tab="true" data-target="#sign-in-register-modal"><?php if(isset($accommodo_redux_demo['header_register'])){?>
+                                    <?php echo esc_attr(htmlspecialchars_decode($accommodo_redux_demo['header_register']));?>
+                                    <?php  }else{?>
+                                    <?php echo esc_html__( 'Register', 'accommodo' );
+                                     }
                                     ?></a>
-                                </div>-->
+                                </div>
                                 
                             </div>
                             <!--end right-->
@@ -137,3 +137,52 @@ $accommodo_redux_demo = get_option('redux_demo');?>
         <!--end header-->
     </div>
     <!--end page-header-->
+	
+	<div id="sign-in-register-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog m-t80">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#tab-sign-in" aria-controls="tab-sign-in" role="tab" data-toggle="tab"><h1>Sign In</h1></a></li>
+                                    <li role="presentation"><a href="#tab-register" aria-controls="tab-register" role="tab" data-toggle="tab"><h1>Register Venue</h1></a></li>
+									
+									   <li role="presentation"><a href="#tab-register-consumer" aria-controls="tab-register" role="tab" data-toggle="tab"><h1>Register Consumer</h1></a></li>
+                                </ul>
+                            </div>
+                            <!--end modal-header-->
+                            <div class="modal-body">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in" id="tab-sign-in">
+                                <?php echo do_shortcode(' [ultimatemember form_id=286]'); ?>  
+
+
+                                    <!--end form-sign-in-->
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade " id="tab-register">
+                                    <?php echo do_shortcode('[ultimatemember form_id=285]'); ?>
+                                    <!--end form-sign-in-->
+                                </div>
+									<div role="tabpanel" class="tab-pane fade " id="tab-register-consumer">
+                                    <?php echo do_shortcode('[ultimatemember form_id=303]'); ?>
+                                    <!--end form-sign-in-->
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--end modal-body-->
+                        <div class="modal-footer">
+                            <div class="center">
+                                <div>Lost Password? <a href="<?php echo home_url('/password-reset'); ?>">Reset here</a></div>
+                                <div>New to Accommondo? <a href="#tab-register" aria-controls="tab-register" role="tab" data-toggle="tab">Register an account</a></div>
+                            </div>
+                        </div>
+                        <!--end modal-footer-->
+                    </div>
+
+  </div>
+</div>
+	
