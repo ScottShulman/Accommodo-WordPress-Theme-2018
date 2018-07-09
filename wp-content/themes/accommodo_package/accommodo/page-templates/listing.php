@@ -214,3 +214,10 @@ get_header(); ?>
 <?php
 get_footer();
 ?>
+
+<a href="#page-header" class="to-top scroll" data-show-after-scroll="600"><i class="arrow_up"></i></a>
+
+<div class="message-popup featured top-right" data-show-after-time="3000">
+    <div class="close"><i class="fa fa-times"></i></div>
+    <?php echo do_shortcode('[contact-form-7 id="433" title="contact search form"]'); ?>
+</div>

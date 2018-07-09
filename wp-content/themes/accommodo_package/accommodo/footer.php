@@ -6,6 +6,34 @@
                                     <?php echo esc_html__( ' ', 'accommodo' );
                                     }
                                     ?>
+                                    
+        <div class="row-one">
+            <div class="container">
+                <div class="logos">
+                    <div class="logo">
+                        <a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo-1.png" alt=""></a>
+                    </div>
+                    <!--/ .logo-->
+                    <div class="logo">
+                        <a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo-2.png" alt=""></a>
+                    </div>
+                    <!--/ .logo-->
+                    <div class="logo">
+                        <a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo-3.png" alt=""></a>
+                    </div>
+                    <!--/ .logo-->
+                    <div class="logo">
+                        <a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo-4.png" alt=""></a>
+                    </div>
+                    <!--/ .logo-->
+                    <div class="logo">
+                        <a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo-5.png" alt=""></a>
+                    </div>
+                    <!--/ .logo-->
+                </div>
+                <!--/ .logos-->
+            </div>
+        </div>
         <!--end row-one-->
         <div class="row-two clearfix">
             <div class="container">
@@ -70,7 +98,13 @@
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/js/maps.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/js/custom.js"></script>
 
-
+<script>
+    var _latitude = 48.47292127;
+    var _longitude = 4.28672791;
+    var element = "map-item";
+    var useAjax = true;
+    bigMap(_latitude,_longitude, element, useAjax);
+</script>
 
 <?php wp_footer(); ?>
 </body>

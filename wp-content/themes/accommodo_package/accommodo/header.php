@@ -148,28 +148,25 @@ $accommodo_redux_demo = get_option('redux_demo');?>
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li role="presentation" class="active"><a href="#tab-sign-in" aria-controls="tab-sign-in" role="tab" data-toggle="tab"><h1>Sign In</h1></a></li>
-                                    <li role="presentation"><a href="#tab-register" aria-controls="tab-register" role="tab" data-toggle="tab"><h1>Register Venue</h1></a></li>
+                                   <li role="presentation"><a href="#tab-register" aria-controls="tab-register" role="tab" data-toggle="tab"><h1>Register </h1></a></li>
 									
-									   <li role="presentation"><a href="#tab-register-consumer" aria-controls="tab-register" role="tab" data-toggle="tab"><h1>Register Consumer</h1></a></li>
+									   <!--<li role="presentation"><a href="#tab-register-consumer" aria-controls="tab-register" role="tab" data-toggle="tab"><h1>Register Consumer</h1></a></li>-->
                                 </ul>
                             </div>
                             <!--end modal-header-->
-                            <div class="modal-body">
-                                <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane fade active in" id="tab-sign-in">
+                       <div class="modal-body">
+                           <div class="tab-content">
+                             <div role="tabpanel" class="tab-pane fade active in" id="tab-sign-in">
                                 <?php echo do_shortcode(' [ultimatemember form_id=286]'); ?>  
 
-
-                                    <!--end form-sign-in-->
-                                </div>
-                                <div role="tabpanel" class="tab-pane fade " id="tab-register">
+                               </div>
+                               <div role="tabpanel" class="tab-pane fade " id="tab-register">
                                     <?php echo do_shortcode('[ultimatemember form_id=285]'); ?>
-                                    <!--end form-sign-in-->
+                                   
                                 </div>
-									<div role="tabpanel" class="tab-pane fade " id="tab-register-consumer">
-                                    <?php echo do_shortcode('[ultimatemember form_id=303]'); ?>
-                                    <!--end form-sign-in-->
-                                </div>
+								<!--<div role="tabpanel" class="tab-pane fade " id="tab-register-consumer">
+                                    <?php //echo do_shortcode('[ultimatemember form_id=303]'); ?>
+                                    </div>-->
                             </div>
 
                         </div>
@@ -177,7 +174,7 @@ $accommodo_redux_demo = get_option('redux_demo');?>
                         <div class="modal-footer">
                             <div class="center">
                                 <div>Lost Password? <a href="<?php echo home_url('/password-reset'); ?>">Reset here</a></div>
-                                <div>New to Accommondo? <a href="#tab-register" aria-controls="tab-register" role="tab" data-toggle="tab">Register an account</a></div>
+                              <!--<div>New to Accommondo? <a href="#tab-register" aria-controls="tab-register" role="tab" data-toggle="tab">Register an account</a></div>-->
                             </div>
                         </div>
                         <!--end modal-footer-->
